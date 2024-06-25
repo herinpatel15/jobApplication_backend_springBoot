@@ -22,4 +22,5 @@ public class JobController {
         jobs.add(job);
         return "Job add successful...";
     }
+
 }
