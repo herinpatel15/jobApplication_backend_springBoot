@@ -1,5 +1,6 @@
 package com.helloHerin.jobApplication.job;
 
+import com.helloHerin.jobApplication.compny.Compny;
 import jakarta.persistence.*;
 
 @Entity
@@ -14,6 +15,9 @@ public class Job {
     private String maxSalary;
     private String location;
 
+    @ManyToOne
+    private Compny company;
+
     //for jpa to default to all time to create null cu structer
     public Job() {}
 
@@ -24,6 +28,14 @@ public class Job {
         this.minSalary = minSalary;
         this.maxSalary = maxSalary;
         this.location = location;
+    }
+
+    public Compny getCompany() {
+        return company;
+    }
+
+    public void setCompany(Compny company) {
+        this.company = company;
     }
 
     public Long getId() {
