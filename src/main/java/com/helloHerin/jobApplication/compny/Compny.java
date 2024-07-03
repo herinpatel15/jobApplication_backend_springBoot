@@ -25,6 +25,8 @@ public class Compny {
         this.jobs = jobs;
     }
 
+    public Compny() {}
+
     public Long getId() {
         return id;
     }
